@@ -79,9 +79,18 @@ public class ContactsSystem {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите имя контакта:");
-        String name = scanner.nextLine();
+        String name = scanner.nextLine().trim();
+        if (name.isEmpty()) {
+            System.out.println("Ошибка! Имя не может быть пустым!");
+            return;
+        }
         System.out.println("Введите номер контакта:");
-        String number = scanner.nextLine();
+        String number = scanner.nextLine().trim();
+        if (number.isEmpty()) {
+            System.out.println("Ошибка! Номер не может быть пустым!");
+            return;
+        }
+
         this.names[this.contactCount] = name;
         this.phoneNumbers[this.contactCount] = number;
         this.contactCount++;
