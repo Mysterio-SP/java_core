@@ -8,6 +8,7 @@ public class Magazine extends Publication implements Printable {
 
     Magazine(String aurhor, String title, int year, int issueNumber) {
         super(aurhor, title, year);
+        this.issueNumber = issueNumber;
     }
 
     public String getType() {
